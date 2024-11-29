@@ -21,8 +21,8 @@ export default async function Page({
           </Link>
         </div>
         <div>
-          <h3 className='text-center'>Kiểm hàng siêu thị: </h3>
-          <h3 className='text-center'>
+          <h3 className='text-center text-black'>Kiểm hàng siêu thị: </h3>
+          <h3 className='text-center underline text-green-700'>
             {' '}
             {nameMarket ? nameMarket.label : 'Siêu thị không hợp lệ'}{' '}
           </h3>
