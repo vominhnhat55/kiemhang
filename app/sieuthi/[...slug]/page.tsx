@@ -1,5 +1,4 @@
 import MarketData from '@/data/marketdata';
-
 import TableProduct from '@/table/product/page';
 import {ArrowLeft} from 'lucide-react';
 import Link from 'next/link';
@@ -10,10 +9,8 @@ export default async function Page({
 }) {
   const slug = (await params).slug;
   const nameMarket = MarketData.filter((framework) => {
-    console.log(framework.value, slug[0]);
     return framework.value === slug[0];
   })[0];
-  console.log(nameMarket);
 
   return (
     <div className='flex flex-col justify-center items-center gap-2 mt-4 text-2xl font-semibold text-green-600'>

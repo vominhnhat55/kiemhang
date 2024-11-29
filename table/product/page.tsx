@@ -1,7 +1,7 @@
-import {Payment, columns} from './columns';
+import {ProductType, columns} from './columns';
 import {DataTable} from './data-table';
 
-async function getData(): Promise<Payment[]> {
+async function getData(): Promise<ProductType[]> {
   // Fetch data from your API here.
   return [
     {
@@ -18,6 +18,31 @@ async function getData(): Promise<Payment[]> {
       mst: 'st01',
       amount: 34,
       name: 'hạnh nhân nướng 200g',
+    },
+    {
+      mst: 'st01',
+      amount: 34,
+      name: 'hạnh nhân nướng 300g',
+    },
+    {
+      mst: 'st01',
+      amount: 34,
+      name: 'bí xanh nướng 100g',
+    },
+    {
+      mst: 'st01',
+      amount: 34,
+      name: 'hạt đát 300g',
+    },
+    {
+      mst: 'st01',
+      amount: 34,
+      name: 'bí xanh nướng 300g',
+    },
+    {
+      mst: 'st01',
+      amount: 34,
+      name: 'bí xanh nước 200g',
     },
   ];
 }

@@ -19,7 +19,8 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import {Input} from '@/components/ui/input';
-
+import {DialogProduct} from './dialogProduct';
+import {ProductType} from './columns';
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -76,19 +77,21 @@ export function DataTable<TData, TValue>({
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
-                <TableRow
+                <DialogProduct
                   key={row.id}
-                  data-state={row.getIsSelected() && 'selected'}
+                  product={row.original as ProductType}
                 >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
+                  <TableRow data-state={row.getIsSelected() && 'selected'}>
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                </DialogProduct>
               ))
             ) : (
               <TableRow>
