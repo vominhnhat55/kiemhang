@@ -32,10 +32,10 @@ export default function HomePage() {
   return (
     <div className='flex h-full w-screen justify-center items-center flex-col gap-4 mt-[200px] px-10 '>
       <h1
-        className='font-bold text-xl
+        className='font-bold text-xl text-center 
       '
       >
-        THEO DÕI BIẾN THỂ HÀNG HOÁ
+        THEO DÕI HÀNG HOÁ
       </h1>
       <Image
         src='https://static.wixstatic.com/media/a3704e_4f1ed9eeeada4798b934de7637cf345e~mv2.png/v1/fill/w_156,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/KASH_Fine%20Food_Logo.png'
